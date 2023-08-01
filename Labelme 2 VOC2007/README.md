@@ -2,8 +2,8 @@
 
 
 ## Usage
-### First, the annotation file is converted to xml
-### Then, the set of txt format file paths under voc is generated
+- First, the annotation file is converted to xml
+- Then, the set of txt format file paths under voc is generated
 
 ## Convert to VOC-format Dataset
 
