@@ -1,5 +1,5 @@
 """
-再有标准VOC之后，可以使用此文件生成那个txt
+再有标准VOC之后，可以使用此文件生成yolov5那个txt
 """
 import xml.etree.ElementTree as ET
 from tqdm import tqdm
