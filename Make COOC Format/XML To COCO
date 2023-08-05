@@ -1,4 +1,4 @@
-### 用这个将xml转化为json格式可以正常的训练
+### Using this to convert xml to json will work fine
 
 import xml.etree.ElementTree as ET
 import os
@@ -181,11 +181,11 @@ def parseXmlFiles(xml_path):
 
 if __name__ == '__main__':
 
-    xml_path = r"D:\Python\Crop_picture\xml_test"  ## 原始的训练集.xml文件路径
-    json_file = 'instances_train2017.json'  ## 转后保存训练集.json文件的路径
+    xml_path = r"D:\Python\Crop_picture\xml_test"  ## Original *.xml file path
+    json_file = 'instances_train2017.json'  ## Save the path to the training set.json file
     #
-    # xml_path = "coco/valxml"  ## 原始的验证集.xml文件路径
-    # json_file = 'coco/annotations/instances_val2017.json'  ## 转后保存验证集.json文件的路径
+    # xml_path = "coco/valxml"  ## 
+    # json_file = 'coco/annotations/instances_val2017.json'  
 
     parseXmlFiles(xml_path)
     json.dump(coco, open(json_file, 'w'))
