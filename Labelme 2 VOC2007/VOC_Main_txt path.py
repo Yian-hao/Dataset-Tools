@@ -1,29 +1,41 @@
-# 用于将数据集划分成案例比训练，
 """
-将标准的VOC转化为可以用YOLOv5 训练的格式，生成Main 里的三个txt文本，但是，前提要有相应的文件夹，然后接着用另外一个生成label 即文件路径
+Version: 1.0
+Date: 20230802
 
-VOC2007
-|—— Annotations # *.xml File
-| |——000001.xml
-| |——000002.xml
-| |——……
-|—— JPEGImages # *.jpg File
-| |——000001.jpg
-| |——000002.jpg
-| |——……
-|—— ImageSets # txt filename
-| |——Main
+Description:
+used to split the dataset into cases than training
+Training proportions for the partition under Mian are generated
+Mian folder needs to be created in advance, with xml format and images
 
 
+Need file tree
+# VOC 2007
+# ├── Annotations  # *.xml File
+# │   ├── image1.xml
+# │   ├── image2.xml
+# │   └── ...
+# ├── JPEGImages  # *.jpg File
+# │   ├── image1.jpg
+# │   ├── image2.jpg
+# │   └── ...
+# └── ImageSets
+#     └── Main    # *.txt File
+#         ├── train.txt
+#         ├── val.txt
+#         └── ...
+
+20230804
+
+In addition, if you plan to train with yolov5 and above models, you can use the data_v5 file to generate the required format for the model
 """
 
 
 
-# 划分VOC数据集
+# Divide the VOC dataset
 import os
 import random
 
-datasets_path = r'VOC2007/'  # 数据集路径
+datasets_path = r'VOC2007/'  
 
 trainval_percent = 0.8
 train_percent = 0.9
